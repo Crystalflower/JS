@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script type="text/javascript">
+		function power(val, pow){
+			var result = val
+			if (pow > 1)
+				result *= power(val, pow - 1);
+			return result;
+		}
+		alert(power(2, 8));
+	</script>
+</head>
+</html>

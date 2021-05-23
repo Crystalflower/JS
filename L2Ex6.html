@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script type="text/javascript">
+		function mathOperation(arg1, arg2, operation){
+			switch(operation){
+			  case "addition":
+			  	return arg1 + arg2;
+			  case "subtraction":
+			  	return arg1 - arg2;
+			  case "multiplication":
+			  	return arg1 * arg2;
+			  case "division":
+			  	return arg1 / arg2;
+			}
+		}
+		let variable1 = 11;
+		let variable2 = 6;
+		let action = "multiplication"
+		alert(mathOperation(variable1, variable2, action));
+	</script>
+</head>
+</html>
