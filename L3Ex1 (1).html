@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script type="text/javascript">
+		let max_number = 100;
+		let numbers_array = [2];
+		let number = 3;
+		while (number <= max_number) {
+			var skip = false;
+			for (var num in numbers_array) {
+				if (number % numbers_array[num] === 0) {
+				  skip = true;
+					number += 2;
+					break;
+	        	}
+	     	}
+			if (skip === true) {
+				continue;
+	    	}
+			numbers_array.push(number);
+			number += 2;
+		}
+		console.log(numbers_array);
+	</script>
+</head>
+</html>
