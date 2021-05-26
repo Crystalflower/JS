@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script type="text/javascript">
+		let input = parseInt(prompt('Введите число от 0 до 999'));
+		while (0 > input || input > 999) {
+			console.log('Число не входит в диапазон от 0 до 999');
+			input = prompt('Введите число от 0 до 999');
+		}
+		function get_obj(user_answer) {
+			let user_object = {'единицы': 0, 'десятки': 0, 'сотни': 0};
+			let count = 0;
+			let object_keys = Object.keys(user_object);
+			while (user_answer) {
+		    	user_object[object_keys[count]] = user_answer % 10;
+		    	user_answer = Math.floor(user_answer/10);
+		    	count += 1;
+			}
+			return user_object;
+		}
+		console.log(get_obj(input));
+	</script>
+</head>
+</html>
